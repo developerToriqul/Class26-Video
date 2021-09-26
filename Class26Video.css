@@ -23,12 +23,49 @@ li{
 /* header-seciton */
 .header-section{}
 .header-section ul{}
-.header-section ul li{}
+.header-section ul li:nth-child(1) a{
+    color: #e73c3e;
+}
 .header-section ul li a {
     color: black;
     font-size: 18px;
     padding: 0 20px;
-    font-weight: 400;
+    font-weight: 500;
+}
+
+/* header-hover */
+.header-section ul li{
+    position: relative;
+}
+.header-section ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    top: 200%;
+}
+.header-section ul li ul{
+    position: absolute;
+    left: 0;
+    top: 240%;
+    width: 250px;
+    background: #fff;
+    padding-left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+
+}
+.header-section ul li ul li{}
+.header-section ul li ul li a {
+    color: #111 !important;
+    display: block;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 19px;
+    transition: .4s;
+}
+.header-section ul li ul li a:hover{
+    letter-spacing: 1.5px;
+    color: #e73c3e !important;
 }
 
 .header-right{}
@@ -52,11 +89,13 @@ li{
 }
 .header-call .call-icon i{}
 
+
+
 .call-number {
     width: 152px;
 }
-.call-number h6{
-   
+.call-number h6 {
+    color: #606060;
 }
 .call-number a {
     display: block;
@@ -95,7 +134,7 @@ li{
 
 /* banner-section */
 .banner-section{
-    background: url(https://i.ibb.co/z8f4NNv/Class-24-2.jpg) no-repeat top center;
+    background: url(https://i.ibb.co/z8f4NNv/Class-24-2.jpg) no-repeat fixed top center;
     background-size: cover;
     padding: 200px 0;
 }
@@ -103,8 +142,18 @@ li{
     margin-top: 80px;
 }
 .div span {
-    margin-right: 20px;
+    margin-right: 57px;
     display: inline-block;
+    position: relative;
+}
+.div span::after {
+    content: "";
+    position: absolute;
+    left: 78px;
+    bottom: 10px;
+    width: 30px;
+    height: 1px;
+    background: #111;
 }
 .follow-icon{
     margin-right: 10px;
@@ -543,7 +592,7 @@ li{
     letter-spacing: 1.5px;
 }
 
-.footer-widget{
+.footer-widget {
     background-color: #111111;
     color: #fff;
     padding-top: 100px;
@@ -579,6 +628,12 @@ li{
     color: #fff;
     margin-bottom: 9px;
     display: block;
+    transition: .4s;
+}
+.widget-content ul li a:hover{
+    letter-spacing: 1.5px;
+    color: #e74042;
+
 }
 
 .contact-widget .icon {
@@ -595,8 +650,18 @@ li{
     color: #fff;
 }
 
-.footer-widget-items{
-    padding-bottom: 70px;
+.footer-bottom{}
+.footer-bottom p {
+    color: #dddd;
+    margin-top: 48px;
+    border-top: 1px solid #dddd;
+    padding-top: 36px;
+    font-size: 19px;
+}
+.footer-bottom p span {
+    color: #fff;
+    font-weight: 500;
+    font-size: 19px;
 }
 
 
